@@ -13,7 +13,7 @@ We squash the two columns `home_goals` and `away goals` and replace it with clas
 
 - 2: win for home team
 - 1: draw
-- 0: loss for home team
+- 0: win for away team
 
 ## Exponential Weighted Average (EWA)
 
@@ -22,7 +22,7 @@ $\text{EWA} = \frac{\sum_{i=1}^n \left( \alpha^{n-i} \cdot X_i \right)}{\sum_{i=
 ### Where:
 - $\text{EWA}$ = Exponential Weighted Average  
 - $X_i$ = The value of the $i$-th data point  
-- $\alpha$ = Decay factor, $0 < \alpha \leq 1$  
+- $\alpha$ = Decay factor, (0.9)  
 - $n$ = Total number of data points
 
 ### Normalization:
