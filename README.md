@@ -41,15 +41,15 @@ $\text{EWA} = \sum_{i=1}^n w_i \cdot X_i$
 As observed, there are much more Home wins the Away wins and draws. This is a bias that might potentially create problems for the model, but we leave it since it is also a feature in soccer games. (Home Court Advantage is statistically proven to occur)
 
 ## Initial Model
-We first use a base model to do a simple pass through to assess the required adjustments. Since there are 3 possible results: win for home team, draw for home team, and loss for home team, we use a Soft Max activation function. To start off the model, we use a standard 3 hidden layer network with decreasing neurons and standard dropouts in each layer. We use a standard Cross-entropy loss which is suitable for multi-class classification problems.
+We first use a base model to do a simple pass through to assess the required adjustments. Since there are 3 possible results: win for home team, draw for home team, and win for away team, we use a Leaky ReLU function for the hidden layer neurons and a Soft Max activation function for multi-class classification. To start off the model, we use a standard 3 hidden layer network with decreasing neurons and standard dropouts in each layer. We use a standard Cross-entropy loss which is suitable for multi-class classification problems.
 
 ### Initial Neural Network Structure:
 ```
 Input -> 128 -> 64 -> 32 -> 3
 ```
-The shows significant overfitting and the model is not able to learn the relationship between the training and target columns. 
 
 ### Initial Results
+The results shows significant overfitting and the model is not able to learn the relationship between the training and target columns. 
 The initial accuracy for rounding the output predictions to the nearest whole number is around the 46.5%
 
 ```
