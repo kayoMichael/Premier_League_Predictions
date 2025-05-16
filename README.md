@@ -50,7 +50,7 @@ Input -> 128 -> 64 -> 32 -> 3
 
 ### Initial Results
 The results shows significant overfitting and the model is not able to learn the relationship between the training and target columns. 
-The initial accuracy for rounding the output predictions to the nearest whole number is around the 46.5%
+The initial accuracy for rounding the output predictions to the nearest whole number is around the 44.31%
 
 ```
 Epoch [10/100], Train Loss: 1.0748, Val Loss: 1.0677
@@ -129,7 +129,7 @@ The Accuracy slightly went down but the model is able to predict all classes of 
 
 ## Plateauing Validation Loss
 
-We have seen that the validation loss has either plateaued or increased as epoch -> 100. To fix this problem, we employ an aggresived method. 
+We have seen that the validation loss has either plateaued or increased as epoch -> 100. To fix this problem, we employ an aggresive method. 
 
 ### L2 Regularization
 We first add a small L2 Regularization, (around 0.0005) which helps decrease the val loss slightly and increase accuracy
@@ -271,4 +271,4 @@ The Model holds a 55.64% accuracy at predicting the result of a soccer match usi
 Since the Baseline Accuracy (Only Predicting Home Win) is 41.25%, the model performs ~14.3% better than the baseline accuracy. 
 
 ## Limitations of Dataset
-The variance and unpredictability of soccer matches really did hurt my accuracy and loss. (E.g. More shots does not mean wins) But overall a 14% increased accuracy is a relatively modest improvement. In the future, more relevant features and a more serious feature selection may need to be performed for better results.
+The variance and unpredictability of soccer matches really did hurt my accuracy and loss. (E.g. Better stats does not mean wins. E.g in EPL 2018 ~ Present, 55% or more possession won approximately 58% of matches. Siginificant but still low) But overall a 14% increased accuracy is a relatively modest improvement. In the future, more relevant features and a more serious feature selection may need to be performed for better results.
