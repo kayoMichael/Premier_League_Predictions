@@ -70,11 +70,7 @@ Test Accuracy: 0.4431
 ```
 
 ## Regularization
-We first use a direct approach to combat overfitting. Since we have 182 features, there definitely exists overlapping features like (xG and xAG) that we can eliminate from the training. Thus, we use Lasso Regularization (L1) to both perform feature selection and decrease overfitting. 
-
-"""
-Lasso Regularization Formula
-"""
+We first use a direct approach to combat overfitting. Since we have 182 features, there definitely exists overlapping features like (xG and xAG) that we can eliminate from the training. Thus, we use Lasso Regularization (L1) to both perform feature selection and decrease overfitting.
 
 ## Result After Regularization
 ```

@@ -39,6 +39,9 @@ plt.xlabel("Outcome")
 plt.ylabel("Frequency")
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
+plt.savefig("match_outcome_distribution.png", dpi=300, bbox_inches='tight')
+plt.show()
+plt.close()
 
 # Set random seeds for reproducibility
 np.random.seed(88)
@@ -197,8 +200,3 @@ with torch.no_grad():
 # Save model
 torch.save(model.state_dict(), "soccer_score_model.pth")
 print("\nModel weights saved as 'soccer_score_model.pth'")
-
-
-
-
-
